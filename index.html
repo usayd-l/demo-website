@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usayd</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Links in navbar scroll to corresponding sections when clicked -->
+    <!-- LOGO PLACEMENT SUGGESTIONS:
+         1. Replace "usayd" text in nav-left with <img src="logo.png" class="logo-nav">
+         2. Add logo before "usayd" text in nav-left
+         3. Add logo in footer (footer-left or footer-center)
+         4. Use logo as a small floating element (position: fixed) -->
+    <nav class="nav-bar">
+        <div class="nav-left">
+            <!-- Logo replacing "usayd" text -->
+            <a href="#aboutMe" class="logo-link">
+                <img src="images/sign.svg" alt="usayd" class="logo-nav">
+            </a>
+        </div>
+        <div class="nav-center">
+            <!-- Link to projects section -->
+            <a href="#projects">projects</a>
+        </div>
+        <div class="nav-right">
+            <!-- Link to get in touch section -->
+            <a href="#getInTouch">get in touch</a>
+        </div>
+    </nav>
+
+    <!-- Scrollable Container -->
+    <div class="scroll-container">
+        <!-- Image Gallery -->
+        <div class="image-gallery" id="gallery"></div>
+
+        <!-- Overlay Sections -->
+        <section class="overlay-section" id="aboutMe">
+            <div class="section-content">
+                <h2>about me</h2>
+                <p class="about-intro">Placeholder content for about me section. This is a longer description that provides context about my background, interests, and professional journey.</p>
+                
+                <!-- Timeline Section -->
+                <!-- Timeline displays career highlights with circles on line, vertical branches, and diagonal text branches -->
+                <div class="timeline-container">
+                    <h3 class="section-subtitle">Career Highlights</h3>
+                    <div class="timeline">
+                        <!-- Horizontal timeline line -->
+                        <div class="timeline-line"></div>
+                        
+                        <!-- Timeline Point 1: 2020 -->
+                        <!-- Simplified timeline: dot on line, year above, text below -->
+                        <div class="timeline-point" data-year="2020">
+                            <div class="point-label">2020</div>
+                            <div class="point-dot"></div>
+                            <div class="point-line"></div>
+                            <div class="point-description">Career milestone placeholder</div>
+                        </div>
+                        
+                        <!-- Timeline Point 2: 2022 -->
+                        <div class="timeline-point" data-year="2022">
+                            <div class="point-label">2022</div>
+                            <div class="point-dot"></div>
+                            <div class="point-line"></div>
+                            <div class="point-description">Another significant achievement</div>
+                        </div>
+                        
+                        <!-- Timeline Point 3: 2024 -->
+                        <div class="timeline-point" data-year="2024">
+                            <div class="point-label">2024</div>
+                            <div class="point-dot"></div>
+                            <div class="point-line"></div>
+                            <div class="point-description">Recent accomplishment</div>
+                        </div>
+                        
+                        <!-- Timeline Point 4: 2025 -->
+                        <div class="timeline-point" data-year="2025">
+                            <div class="point-label">2025</div>
+                            <div class="point-dot"></div>
+                            <div class="point-line"></div>
+                            <div class="point-description">Current focus</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-section">
+                    <h3 class="section-subtitle">Certifications & Achievements</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <h4>Certification 1</h4>
+                            <p>Placeholder certification description</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Certification 2</h4>
+                            <p>Placeholder certification description</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Achievement 1</h4>
+                            <p>Placeholder achievement description</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Achievement 2</h4>
+                            <p>Placeholder achievement description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="overlay-section" id="projects">
+            <div class="section-content">
+                <h2>projects</h2>
+                <p class="projects-subheading">A selection of my recent work and collaborations</p>
+                
+                <!-- Projects Grid -->
+                <!-- TO EDIT PROJECTS: Edit titles and one-liners here in HTML (what users see in grid) -->
+                <!-- Detailed project info (expanded view) is in script.js in the projectData object -->
+                <div class="projects-grid">
+                    <!-- Project Box 1 - data-project attribute matches ID in script.js projectData -->
+                    <div class="project-box" data-project="1">
+                        <h3 class="project-title">Project Title 1</h3>
+                        <p class="project-oneliner">One-liner description of the project</p>
+                    </div>
+                    <!-- Project Box 2 -->
+                    <div class="project-box" data-project="2">
+                        <h3 class="project-title">Project Title 2</h3>
+                        <p class="project-oneliner">One-liner description of the project</p>
+                    </div>
+                    <!-- Project Box 3 -->
+                    <div class="project-box" data-project="3">
+                        <h3 class="project-title">Project Title 3</h3>
+                        <p class="project-oneliner">One-liner description of the project</p>
+                    </div>
+                    <!-- Project Box 4 -->
+                    <div class="project-box" data-project="4">
+                        <h3 class="project-title">Project Title 4</h3>
+                        <p class="project-oneliner">One-liner description of the project</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expanded Project View -->
+            <div class="project-expanded" id="projectExpanded">
+                <button class="close-project" id="closeProject">&times;</button>
+                <div class="expanded-content">
+                    <!-- Left Column: Title and Info Text -->
+                    <div class="expanded-text-column">
+                        <h2 class="expanded-title" id="expandedTitle">Project Title</h2>
+                        <div class="expanded-info" id="expandedInfo">
+                            <p>Project information text goes here...</p>
+                        </div>
+                    </div>
+                    <!-- Right Column: Media (images or YouTube) -->
+                    <div class="expanded-media" id="expandedMedia">
+                        <!-- Will be populated with image gallery or YouTube embed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get In Touch Section -->
+        <section class="overlay-section" id="getInTouch">
+            <div class="section-content">
+                <h2>get in touch</h2>
+                
+                <!-- Contact Form -->
+                <!-- Form uses Formspree for email handling - no backend needed -->
+                <form class="contact-form" method="POST" action="https://formspree.io/f/mdorbknn" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">send</button>
+                </form>
+                
+                <!-- Direct Email Link -->
+                <div class="email-link-container">
+                    <p>or email directly: <a href="mailto:usayd.lakhani@gmail.com" class="email-link">usayd.lakhani@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+     <!-- Fixed Marquee -->
+     <div class="marquee-container" id="marqueeContainer">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span class="marquee-text">artist•developer•founder•director•</span>
+                <span class="marquee-text">artist•developer•founder•director•</span>
+                <span class="marquee-text">artist•developer•founder•director•</span>
+                <span class="marquee-text">artist•developer•founder•director•</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-text">artist•developer•founder•director•</span>
+                <span class="marquee-text">artist•developer•founder•director•</span>
+                <span class="marquee-text">artist•developer•founder•director•</span>
+                <span class="marquee-text">artist•developer•founder•director•</span>
+            </div>
+        </div>
+        <!-- Hover overlay layer - separate from marquee text to prevent bugs -->
+        <div class="marquee-hover-overlay">
+            <span class="hover-text">usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani</span>
+            <span class="hover-text">usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani • usayd lakhani</span>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="#privacy">privacy policy</a>, 
+            <a href="#terms">terms of use</a>, 
+            <a href="#cookies">cookies policy</a> & 
+            <a href="#settings">cookies settings</a>
+        </div>
+        <div class="footer-center">
+            <!-- Footer Layout: YouTube (left) | Logo (center, bigger) | X/Twitter (right) -->
+            <a href="#" class="social-link footer-social-left">
+                <!-- YouTube Icon -->
+                <svg class="social-icon-footer" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+            </a>
+            <!-- Logo - Center, bigger than social icons -->
+            <a href="#aboutMe" class="footer-logo-link">
+                <img src="images/sign.svg" alt="usayd" class="footer-logo">
+            </a>
+            <!-- X/Twitter Icon -->
+            <a href="#" class="social-link footer-social-right">
+                <svg class="social-icon-footer" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="footer-right">
+            © 2025 u lakhani
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
