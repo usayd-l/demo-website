@@ -1186,68 +1186,88 @@ html {
         top: 280vh;
     }
 }
-
-/* Add these media queries at the end of your existing CSS file */
-
-@media screen and (max-width: 768px) {
-    /* Improve section spacing */
-    .overlay-section {
-        padding: 40px 20px;
-        margin-bottom: 30px;
+@media (max-width: 768px) {
+    .scroll-container {
+        height: auto;
+        min-height: 100vh;
     }
 
-    /* Adjust section content */
-    .section-content {
+    .overlay-section {
+        position: absolute; /* Keep this absolute */
+        left: 50%;
+        transform: translateX(-50%);
         width: 90%;
         margin: 0 auto;
+        opacity: 1;
+        pointer-events: auto;
     }
 
-    /* Timeline adjustments */
-    .timeline-container {
-        padding: 20px 10px;
+    /* Reset section positions */
+    #aboutMe {
+        top: 100vh;
     }
 
-    .timeline-point {
-        margin: 30px 0;
+    #projects {
+        top: 250vh;
     }
 
-    /* Projects grid adjustment */
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Contact form adjustments */
-    .contact-form {
-        width: 100%;
-        padding: 15px;
+    #getInTouch {
+        top: 350vh;
     }
 
     /* Image gallery adjustments */
     .image-gallery {
-        display: grid;
+        position: fixed;
+        top: 80px;
+        height: 100vh;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        padding: 15px;
+    }
+
+    .gallery-image {
+        min-height: 150px;
+        max-height: 300px;
+    }
+
+    .section-content {
+        padding: 30px 20px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    /* Further adjustments for smaller screens */
+@media (max-width: 480px) {
     .image-gallery {
         grid-template-columns: 1fr;
     }
 
-    /* Navigation adjustments */
-    .nav-bar {
-        padding: 10px;
-        flex-direction: column;
-        gap: 10px;
+    .overlay-section {
+        width: 95%;
     }
 
-    /* Footer adjustments */
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .section-content {
+        padding: 25px 15px;
+    }
+
+    /* Adjust font sizes for mobile */
+    .section-content h2 {
+        font-size: 28px;
+    }
+
+    .section-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+     /* Further adjust section positions for mobile */
+     #aboutMe {
+        top: 80vh;
+    }
+
+    #projects {
+        top: 230vh; /* Increased spacing on mobile */
+    }
+
+    #getInTouch {
+        top: 330vh; /* Adjusted accordingly */
     }
 }
