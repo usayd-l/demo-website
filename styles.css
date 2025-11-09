@@ -1186,3 +1186,68 @@ html {
         top: 280vh;
     }
 }
+
+/* Add these media queries at the end of your existing CSS file */
+
+@media screen and (max-width: 768px) {
+    /* Improve section spacing */
+    .overlay-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Adjust section content */
+    .section-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Timeline adjustments */
+    .timeline-container {
+        padding: 20px 10px;
+    }
+
+    .timeline-point {
+        margin: 30px 0;
+    }
+
+    /* Projects grid adjustment */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Contact form adjustments */
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Image gallery adjustments */
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navigation adjustments */
+    .nav-bar {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
